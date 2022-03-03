@@ -6,7 +6,9 @@
 
 #Implementation based on lecture notes
 
-Tasks = [[35,75,75], [10,40,40], [5,20,20]]
+
+#IMPORTANT! Tasks should be ordered with highest priority first
+Tasks = [[5,20,15], [10,40,30], [20,50,40]]
 
 NoFlag = False
 for i in range(0, len(Tasks)):
@@ -27,6 +29,7 @@ for i in range(0, len(Tasks)):
         print("W" + str(int(i+1)) + "=" + str(Wsum) + " > D=" + str(Tasks[i][2]) + " :(" )
         NoFlag = True
 if(NoFlag):
-    print("Not RM schedulable")
+  print("Not schedulable based on response-time analysis")
 else:
-    print("RM schedulable!")
+    print("Schedulable based on response-time analysis!")
+
