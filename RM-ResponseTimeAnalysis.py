@@ -6,15 +6,14 @@
 
 #Implementation based on lecture notes
 
-Tasks = [[3,7,7], [3,12,12], [5,20,20]]
-
+Tasks = [[35,75,75], [10,40,40], [5,20,20]]
 
 NoFlag = False
 for i in range(0, len(Tasks)):
     C = Tasks[i][0]
     Wsum = 0
     Wsum_t = C
-    while(Wsum != Wsum_t):
+    while(Wsum != Wsum_t and Wsum <= Tasks[i][2]):
         Wsum_t = Wsum
         Wsum = 0
         for j in range (0, i+1):
